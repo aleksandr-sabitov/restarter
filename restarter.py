@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 import logging
 import os
 import sys
@@ -23,7 +23,7 @@ def service_is_running(check_process, pid_to_skip):
 # function to start service if it's not running
 def start_if_not_running(to_check_process, full_command_process, pid_to_skip):
     if not service_is_running(to_check_process, pid_to_skip):
-        print(date)
+        print(datetime.now())
         print("WARNING: " + to_check_process + " is NOT running")
         # log_cmd = str(etl_fw_process).split('.')[0] + "_output.log"
         # run_cmd = full_command_process 
