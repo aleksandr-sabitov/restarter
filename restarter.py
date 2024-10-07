@@ -25,6 +25,7 @@ def service_is_running(check_process, command_to_skip):
 def start_if_not_running(to_check_process, full_command_process, command_to_skip):
     if not service_is_running(to_check_process, command_to_skip):
         time.sleep(1)
+        print(datetime.now())
         print("WARNING: Auto-restarting " + to_check_process + " by command \"" + full_command_process + "\"")
         os.system(full_command_process)
     # else:
